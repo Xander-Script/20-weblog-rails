@@ -71,3 +71,5 @@ group :test do
 end
 
 gem 'clearance', '~> 2.5'
+
+gem 'rolify', '~> 6.0'
