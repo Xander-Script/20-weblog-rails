@@ -21,6 +21,6 @@ class User < ApplicationRecord
 
   # Callbacks
   def assign_default_role
-    add_role(:guest) if roles.blank?
+    add_role(:member) if roles.blank?
   end
 end
