@@ -73,3 +73,5 @@ end
 gem 'clearance', '~> 2.5'
 
 gem 'rolify', '~> 6.0'
+
+gem "faker", "~> 2.19"

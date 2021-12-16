@@ -96,6 +96,8 @@ GEM
     email_validator (2.2.3)
       activemodel
     erubi (1.10.0)
+    faker (2.19.0)
+      i18n (>= 1.6, < 2)
     ffi (1.15.4)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -215,6 +217,7 @@ DEPENDENCIES
   capybara
   clearance (~> 2.5)
   debug
+  faker (~> 2.19)
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
