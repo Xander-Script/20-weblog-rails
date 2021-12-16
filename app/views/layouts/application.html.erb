@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "trix" %>
+    <%= stylesheet_link_tag "actiontext" %>
+
     <%= javascript_importmap_tags %>
   </head>
 
@@ -21,12 +24,6 @@
   <% else %>
     <%= link_to 'Sign in', sign_in_path %>
   <% end %>
-
-  <div id="flash">
-    <% flash.each do |key, value| %>
-      <div class="flash <%= key %>"><%= value %></div>
-    <% end %>
-  </div>
   <%# todo end %>
 
     <%= yield %>
