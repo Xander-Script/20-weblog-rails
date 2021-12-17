@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Weblog</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -15,35 +15,40 @@
 
 <body>
 
-<div id="app">
-  <header>
-    Helloo...
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, aspernatur consequatur dolorem eius expedita fuga
-    ipsum labore laboriosam maxime minima minus necessitatibus nulla, officiis perspiciatis quasi recusandae unde velit
-    voluptatem?
+<div id="wrapper">
+<!--<div id="wrapper" class="container mx-auto grid grid-flow-row gap-4 grid-rows-3 grid-cols-3">-->
+  <header class="bg-green-50 col-span-12">
+    <div id="logo">
+      <h1>Logo</h1>
+    </div>
+    <nav>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores aspernatur consectetur cupiditate debitis delectus, deserunt eligendi fuga fugiat, incidunt nihil, odio perspiciatis porro quae quidem rerum sapiente sequi temporibus!
+    </nav>
   </header>
 
-  <main>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti doloremque ipsum neque nobis quibusdam unde vel.
-    Alias animi cumque deleniti doloribus nostrum perspiciatis quasi quibusdam quisquam sequi, veritatis, vitae
-    voluptates!
+  <aside class="bg-amber-50 col-span-3">
+    aside
+  </aside>
+
+  <main class="bg-red-50 col-span-9">
+    <%= yield %>
   </main>
 
-  <footer>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur aut consectetur debitis, eaque enim ex
-    impedit inventore laboriosam minima molestias perferendis quaerat qui quos recusandae rem tenetur totam velit.
+  <footer class="bg-blue-50 col-span-12">
+    footer
   </footer>
 </div>
 
+
 <%# todo temporary %>
-<% if signed_in? %>
-  Signed in as: <%= current_user.email %>
-  <%= button_to 'Sign out', sign_out_path, method: :delete %>
-<% else %>
-  <%= link_to 'Sign in', sign_in_path %>
-<% end %>
+<%# if signed_in? %>
+<!--  Signed in as: <%#= current_user.email %>-->
+<%#= button_to 'Sign out', sign_out_path, method: :delete %>
+<%# else %>
+<%#= link_to 'Sign in', sign_in_path %>
+<%# end %>
 <%# todo end %>
 
-<%= yield %>
+<%#= yield %>
 </body>
 </html>

@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#wrapper {
+  @apply mx-auto container max-w-4xl;
+  @apply grid gap-4 grid-flow-row col-span-12;
+
+  /* Column spans */
+  > header,
+  > footer {
+    @apply col-span-12;
+  }
+
+  > aside {
+    @apply hidden md:block md:col-span-4 lg:col-span-3;
+  }
+
+  > main {
+    @apply col-span-12 md:col-span-8 lg:col-span-9;
+  }
+
+  /* Header */
+  > header {
+    @apply flex flex-wrap lg:flex-nowrap;
+    @apply p-4;
+
+    #logo {
+      @apply w-1/6 my-4;
+    }
+
+    nav {
+      @apply flex-wrap;
+    }
+  }
+
+  /* Aside */
+  > aside {
+
+  }
+
+  /* Main */
+  > main {
+
+  }
+
+  /* Footer */
+  > footer {
+
+  }
+}
+
