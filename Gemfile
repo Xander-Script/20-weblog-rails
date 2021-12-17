@@ -74,4 +74,6 @@ gem 'clearance', '~> 2.5'
 
 gem 'rolify', '~> 6.0'
 
-gem "faker", "~> 2.19"
+gem 'faker', '~> 2.19'
+
+gem 'cssbundling-rails', '~> 1.0'
