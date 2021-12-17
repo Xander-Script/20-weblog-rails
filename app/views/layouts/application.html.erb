@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Weblog</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Weblog</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "trix" %>
+  <%= stylesheet_link_tag "actiontext" %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "trix" %>
-    <%= stylesheet_link_tag "actiontext" %>
+  <%= javascript_importmap_tags %>
+</head>
 
-    <%= javascript_importmap_tags %>
-  </head>
+<body>
 
-  <body>
+<div id="app">
+  <header>
+    Helloo...
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, aspernatur consequatur dolorem eius expedita fuga
+    ipsum labore laboriosam maxime minima minus necessitatibus nulla, officiis perspiciatis quasi recusandae unde velit
+    voluptatem?
+  </header>
 
-  <%# todo temporary %>
-  <% if signed_in? %>
-    Signed in as: <%= current_user.email %>
-    <%= button_to 'Sign out', sign_out_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Sign in', sign_in_path %>
-  <% end %>
-  <%# todo end %>
+  <main>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti doloremque ipsum neque nobis quibusdam unde vel.
+    Alias animi cumque deleniti doloribus nostrum perspiciatis quasi quibusdam quisquam sequi, veritatis, vitae
+    voluptates!
+  </main>
 
-    <%= yield %>
-  </body>
+  <footer>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur aut consectetur debitis, eaque enim ex
+    impedit inventore laboriosam minima molestias perferendis quaerat qui quos recusandae rem tenetur totam velit.
+  </footer>
+</div>
+
+<%# todo temporary %>
+<% if signed_in? %>
+  Signed in as: <%= current_user.email %>
+  <%= button_to 'Sign out', sign_out_path, method: :delete %>
+<% else %>
+  <%= link_to 'Sign in', sign_in_path %>
+<% end %>
+<%# todo end %>
+
+<%= yield %>
+</body>
 </html>
